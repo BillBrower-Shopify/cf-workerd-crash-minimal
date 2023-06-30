@@ -4,14 +4,15 @@
   "devDependencies": {
     "@cloudflare/workers-types": "4.20230404.0",
     "autocannon": "^7.10.0",
+    "miniflare": "3.0.2",
     "npm-run-all": "^4.1.5",
     "typescript": "5.0.4",
-    "wrangler": "2.17.0"
+    "wrangler": "beta"
   },
   "private": true,
   "scripts": {
     "start": "run-p start:*",
-    "start:server": "wrangler dev --experimental-local",
+    "start:server": "NODE_OPTIONS=--max_old_space_size=8192 wrangler dev --experimental-local",
     "start:stress": "node stress.js",
     "deploy": "wrangler publish"
   }
