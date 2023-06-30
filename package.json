@@ -12,7 +12,7 @@
   "private": true,
   "scripts": {
     "start": "run-p start:*",
-    "start:server": "NODE_OPTIONS=--max_old_space_size=8192 wrangler dev --experimental-local",
+    "start:server": "NODE_OPTIONS=--max_old_space_size=8192 wrangler dev",
     "start:stress": "node stress.js",
     "deploy": "wrangler publish"
   }
